@@ -1,0 +1,94 @@
+.stage {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    &__icon {
+        position: relative;
+        padding-left: 60px;
+        padding-top: 40px;
+        min-width: 220px;
+        max-width: 220px;
+        border-right: 1px solid $line-color;
+    }
+
+    .list {
+        padding-left: 60px;
+        padding-top: 60px;
+
+        &__title {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 7px;
+                left: -69px;
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                background-color: $yellow;
+                box-shadow: 0px 0px 24px $yellow
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+
+}
+
+@media only screen and (max-width: 960px) {
+
+
+}
+
+@media only screen and (max-width: 780px) {
+
+
+}
+
+@media only screen and (max-width: 640px) {
+
+    .stage + .stage { padding-top: 30px; }
+    .stage { display: block; }
+    .stage { border-left: 1px solid $line-color; }
+
+    .stage .stage__icon {
+        padding-left: 20px;
+        padding-top: 0;
+        padding-bottom: 20px;
+        border-right: none;
+        font-size: 6em;
+    }
+
+    .stage .stage__icon::before { left: 20px; }
+
+    .stage .list {
+        padding-top: 0;
+        padding-left: 20px;
+    }
+
+    .stage .list__title::before {
+        left: -29px;
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+
+}
+
+@media only screen and (max-width: 375px) {
+
+
+}
+
+@media only screen and (max-width: 320px) {
+
+
+}

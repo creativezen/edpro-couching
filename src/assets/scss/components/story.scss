@@ -1,0 +1,99 @@
+.story {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .photo {
+        padding: 0.5em;
+        max-width: 240px;
+        max-height: 240px;
+        border-radius: 50%;
+        border: 1px solid $line-color;
+        overflow: hidden;
+
+        img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .content {
+        max-width: 920px;
+        padding-left: 40px;
+    }
+
+    .person {
+        margin-bottom: 1em;
+        font-size: 2rem;
+        font-weight: $font-bold;
+
+        .name { margin-right: 1em; }
+
+        .speciality {
+            display: inline-block;
+            font-weight: $font-medium;
+            background: -webkit-linear-gradient($sky 0%, $sky 50%, $blue 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+.story + .story { margin-top: 90px; }
+
+
+@media only screen and (max-width: 1024px) {
+
+
+}
+
+@media only screen and (max-width: 960px) {
+
+    .story + .story { margin-top: 60px; }
+
+    .story .photo {
+        max-width: 148px;
+        max-height: 148px;
+    }
+
+    .story .content { max-width: 500px; }
+}
+
+@media only screen and (max-width: 780px) {
+
+
+}
+
+@media only screen and (max-width: 640px) {
+
+    .story + .story { margin-top: 30px; }
+
+    .story { display: block; }
+
+    .story .content { padding-left: 0; }
+
+    .story .person { font-size: 1.8rem; }
+
+    .story .photo {
+        margin-bottom: 20px;
+        max-width: 170px;
+        max-height: 170px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+
+}
+
+@media only screen and (max-width: 375px) {
+
+
+}
+
+@media only screen and (max-width: 320px) {
+
+
+}

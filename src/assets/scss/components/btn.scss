@@ -1,0 +1,119 @@
+.btn {
+
+    $parent: &;
+
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1.2em 2.4em 1.4em;
+    background-color: $btn-color;
+    border: none;
+    border-radius: 4px;
+
+    font-family: inherit;
+    font-size: 1.9rem;
+    line-height: 100%;
+    font-weight: $font-semibold;
+    color: $white;
+    text-decoration: none;
+    text-align: center;
+
+    transition: all $basic-transition;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $btn-hover;
+    }
+
+    &:focus { outline: none; }
+
+    &--yellow {
+        background-color: $yellow;
+        color: $black;
+
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+    }
+
+    &--small {
+        padding: 0.9em 1.4em 1em;
+        font-size: 1.3rem;
+    }
+
+    &--small-zero {
+        @extend #{$parent}--small;
+        padding: 0.9em 1.4em 1em;
+        background-color: transparent;
+        border: 1px solid $sky;
+        font-size: 1.3rem;
+
+        &.--active {
+            border-color: red;
+
+            &:hover {
+                border-color: $line-color;
+                background-color: transparent;
+                color: $sky;
+            }
+        }
+    }
+}
+
+* + .btn { margin-top: 2em; }
+
+
+@media (hover: none) {
+    .btn:link, .btn:visited, .btn:focus {
+        background-color: $btn-color;
+        color: $white;
+    }
+
+    .btn--small-zero:link, .btn--small-zero:visited, .btn--small-zero:focus {
+        background-color: transparent;
+        color: $white;
+    }
+ }
+
+
+@media only screen and (max-width: 1024px) {
+
+
+}
+
+@media only screen and (max-width: 960px) {
+
+
+}
+
+@media only screen and (max-width: 780px) {
+
+
+}
+
+@media only screen and (max-width: 640px) {
+
+    .btn {
+        width: 100%;
+        font-size: 1.6rem;
+    }
+
+    .btn--small-zero { font-size: 1.2rem; }
+
+    * + .btn--small-zero { margin-top: 1em; }
+}
+
+@media only screen and (max-width: 480px) {
+
+
+}
+
+@media only screen and (max-width: 375px) {
+
+
+}
+
+@media only screen and (max-width: 320px) {
+
+
+}

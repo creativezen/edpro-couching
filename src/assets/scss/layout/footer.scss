@@ -1,0 +1,128 @@
+.footer {
+
+    background-color: $dark;
+    padding-top: 9rem;
+    padding-bottom: 4rem !important;
+
+    .list__item { padding-left: 0; }
+
+    .list__item::before { display: none }
+
+    &__content {
+        padding-bottom: 6rem;
+        border-bottom: 1px solid $line-color;
+    }
+
+    &__content-column {
+        @include col();
+        @include size(3);
+        @include size-md(6);
+        @include size-xs(12);
+    }
+
+    &__bottom {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding-top: 4rem;
+    }
+
+    &__bottom-column {
+
+        .list { text-align: right; }
+
+        .footer__list a { font-size: 1.2rem; }
+
+        .list__item + .list__item { margin-top: 0; }
+    }
+
+    &__column-title {
+        margin-bottom: 0.9em;
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+
+    &__list {
+
+        a {
+            font-size: 1.5rem;
+            font-weight: $font-medium;
+            line-height: 1;
+            color: $dark-medium;
+            transition: $basic-transition;
+
+            &:hover { color: $sky; }
+        }
+    }
+
+    &__adress {
+        font-size: 1.5rem;
+        font-weight: $font-medium;
+        line-height: 1.5;
+        color: $dark-medium;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+
+}
+
+@media only screen and (max-width: 960px) {
+
+    .footer__content-column { margin-bottom: 30px; }
+}
+
+@media only screen and (max-width: 780px) {
+
+
+}
+
+@media only screen and (max-width: 640px) {
+
+    .footer__column-title { font-size: 1.8rem; }
+
+    .footer__list a { font-size: 1.2rem; }
+
+    .footer__adress { font-size: 1.2rem; }
+
+    .footer {
+        padding-top: 3rem;
+        padding-bottom: 2rem !important;
+    }
+
+    .footer__content { padding-bottom: 0; }
+
+    .footer__bottom {
+        padding-top: 3rem;
+        display: block;
+    }
+
+    .footer__bottom-column .list {
+        padding-top: 2rem;
+        text-align: left;
+    }
+
+    .footer .container__columns {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+
+}
+
+@media only screen and (max-width: 375px) {
+
+
+}
+
+@media only screen and (max-width: 320px) {
+
+
+}

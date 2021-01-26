@@ -1,0 +1,50 @@
+.mentors {
+
+    padding-top: 10rem !important;
+
+    .list .list__item::before { @extend .visually-hidden; }
+
+    .list .list__item { padding-left: 0; }
+
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='1600' height='981' viewBox='0 0 1600 981' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 299.964V980.741H1599.71V550.63L1600 550.392V42.4729C1570.61 22.1424 1535.36 8.10819 1494.13 2.26005C1435.65 -6.03536 1384.15 20.993 1327.87 50.531C1280.35 75.4729 1229.41 102.203 1167.99 110.969C1106.72 119.714 1059.04 98.0613 1003.09 72.6531C936.543 42.4285 858.29 6.88944 731.521 10.8811C561.138 16.2459 456.876 90.3714 354.617 163.073C316.833 189.936 279.325 216.602 238.857 239.534C144.646 292.92 77.2588 296.201 7.36133 299.604C4.91113 299.723 2.45752 299.843 0 299.964Z' fill='%23193040'/%3E%3C/svg%3E%0A");
+
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+
+}
+
+@media only screen and (max-width: 960px) {
+
+    .mentors { padding-top: 0 !important; }
+}
+
+@media only screen and (max-width: 780px) {
+
+
+}
+
+@media only screen and (max-width: 640px) {
+
+
+}
+
+@media only screen and (max-width: 480px) {
+
+
+}
+
+@media only screen and (max-width: 375px) {
+
+
+}
+
+@media only screen and (max-width: 320px) {
+
+
+}

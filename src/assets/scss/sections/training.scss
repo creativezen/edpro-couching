@@ -1,0 +1,45 @@
+.training {
+
+    padding-top: 9rem !important;
+    background-color: $dark-hard;
+
+    .list .list__item::before { @extend .visually-hidden; }
+
+    .list .list__item { padding-left: 0; }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+
+}
+
+@media only screen and (max-width: 960px) {
+
+    .training { padding-top: 6rem !important; }
+}
+
+@media only screen and (max-width: 780px) {
+
+
+}
+
+@media only screen and (max-width: 640px) {
+
+    .training { padding-top: 5rem !important; }
+}
+
+@media only screen and (max-width: 480px) {
+
+
+}
+
+@media only screen and (max-width: 375px) {
+
+
+}
+
+@media only screen and (max-width: 320px) {
+
+
+}

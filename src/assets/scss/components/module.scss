@@ -1,0 +1,182 @@
+.module {
+
+    $parent: &;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    &__number {
+        position: relative;
+        padding-left: 60px;
+        min-width: 220px;
+        max-width: 220px;
+
+        font-size: 9em;
+        font-weight: $font-bold;
+        line-height: 1;
+
+        border-right: 1px solid $line-color;
+        color: #1C3343;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 2em;
+            content: 'модуль';
+
+            font-family: $font-family;
+            font-size: 0.2em;
+            font-weight: $font-medium;
+            line-height: 1.3;
+            text-transform: uppercase;
+            background: -webkit-linear-gradient($sky 0%, $sky 50%, $blue 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .list {
+        padding-left: 60px;
+        padding-top: 60px;
+
+        &__title {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 7px;
+                left: -69px;
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                background-color: $yellow;
+                box-shadow: 0px 0px 24px $yellow
+            }
+        }
+
+        &__hour {
+            position: relative;
+            padding-left: 1.9em;
+            margin-bottom: 1em;
+            font-size: 1.9rem;
+            font-weight: $font-semibold;
+
+            &::before {
+                position: absolute;
+                top: 1px;
+                left: 0;
+                content: '';
+                width: 1.3em;
+                height: 1.3em;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.1818 7.09091V2.42855C19.4999 3.01644 23.6364 7.52516 23.6364 13C23.6364 18.8743 18.8743 23.6364 13 23.6364C7.1257 23.6364 2.36364 18.8743 2.36364 13C2.36364 10.1326 3.50192 7.44861 5.49309 5.46485L3.82486 3.79039C1.39294 6.21327 0 9.49777 0 13C0 20.1797 5.8203 26 13 26C20.1797 26 26 20.1797 26 13C26 5.8203 20.1797 0 13 0H11.8182V7.09091H14.1818ZM13 10.6364C12.7883 10.6364 12.583 10.6642 12.3878 10.7164L7.92659 6.25525L6.25525 7.92659L10.7164 12.3878C10.6642 12.583 10.6364 12.7883 10.6364 13C10.6364 14.3054 11.6946 15.3636 13 15.3636C14.3054 15.3636 15.3636 14.3054 15.3636 13C15.3636 11.6946 14.3054 10.6364 13 10.6364Z' fill='url(%23paint0_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='0' y1='0' x2='27.3461' y2='1.50267' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300DADA'/%3E%3Cstop offset='1' stop-color='%23005CFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+            }
+        }
+    }
+
+    &--bonus {
+
+        .list__title {
+            background: -webkit-linear-gradient($sky 0%, $sky 50%, $blue 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        .list__title::before {
+            background-color: $white;
+            box-shadow: 0px 0px 24px $white
+        }
+
+        #{$parent}__number::before {
+            content: 'бонус';
+            background: transparent;
+            -webkit-text-fill-color: $yellow;
+        }
+    }
+
+    &--exam {
+
+        #{$parent}__number::before {
+            content: '';
+        }
+
+        .list__title {
+            font-size: 5rem;
+            font-weight: $font-bold;
+            text-transform: uppercase;
+        }
+
+        .list__title::before {
+            top: 32px;
+            background-color: $white;
+            box-shadow: 0px 0px 24px $white
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+
+}
+
+@media only screen and (max-width: 960px) {
+
+
+}
+
+@media only screen and (max-width: 780px) {
+
+
+}
+
+@media only screen and (max-width: 640px) {
+
+    .module + .module { padding-top: 30px; }
+    .module { display: block; }
+    .module { border-left: 1px solid $line-color; }
+
+    .module__number {
+        padding-left: 20px;
+        border-right: none;
+        font-size: 6em;
+    }
+
+    .module__number::before { left: 20px; }
+
+    .module .list {
+        padding-top: 0;
+        padding-left: 20px;
+    }
+
+    .module .list__title::before {
+        left: -29px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .module .list__hour { font-size: 1.5rem; }
+
+    .module--exam .list__title { font-size: 3.6rem; }
+
+    .module--exam .list__title::before { top: 22px; }
+}
+
+@media only screen and (max-width: 480px) {
+
+
+}
+
+@media only screen and (max-width: 375px) {
+
+
+}
+
+@media only screen and (max-width: 320px) {
+
+
+}

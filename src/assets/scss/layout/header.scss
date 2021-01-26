@@ -1,0 +1,66 @@
+.header {
+    position: relative;
+
+    &__nav {
+        padding-top: 2.5em;
+        padding-bottom: 2.8em;
+
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='1609' height='616' viewBox='0 0 1609 616' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 541.961C21.4902 533.666 44.2764 527.006 68.8999 523.492C125.135 515.467 168.889 535.339 220.232 558.656C281.308 586.394 353.123 619.01 469.463 615.346C625.829 610.423 721.514 542.395 815.36 475.675C850.034 451.023 884.458 426.55 921.597 405.504C1008.06 356.51 1069.9 353.499 1134.05 350.376C1172.03 348.526 1210.83 346.638 1256.02 335.138C1365.5 307.279 1553.41 163.26 1608.69 0H0V541.961Z' fill='%23193040'/%3E%3C/svg%3E%0A");
+        z-index: -1;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+
+}
+
+@media only screen and (max-width: 960px) {
+
+
+}
+
+@media only screen and (max-width: 780px) {
+
+
+}
+
+@media only screen and (max-width: 640px) {
+
+    .header__nav {
+        padding-top: 1.5em;
+        padding-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+
+}
+
+@media only screen and (max-width: 375px) {
+
+
+}
+
+@media only screen and (max-width: 320px) {
+
+
+}

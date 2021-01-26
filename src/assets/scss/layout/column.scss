@@ -1,0 +1,61 @@
+.column {
+
+    $parent: &;
+
+    @include col();
+
+    &--2 {
+        @include size(6);
+        @include size-md(6);
+        @include size-sm(12);
+    }
+
+    &--3 {
+        @include size(4);
+        @include size-md(6);
+        @include size-sm(12);
+    }
+
+    &--4 {
+        @include size(3);
+        @include size-md(4);
+        @include size-sm(6);
+        @include size-xs(12);
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+
+}
+
+@media only screen and (max-width: 960px) {
+
+
+}
+
+@media only screen and (max-width: 780px) {
+
+
+}
+
+@media only screen and (max-width: 640px) {
+
+
+}
+
+@media only screen and (max-width: 480px) {
+
+
+}
+
+@media only screen and (max-width: 375px) {
+
+
+}
+
+@media only screen and (max-width: 320px) {
+
+
+}

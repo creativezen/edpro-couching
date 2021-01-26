@@ -1,0 +1,58 @@
+
+// // BASIC COLORS ==============================================
+// //============================================================/
+$white: #FFFFFF;
+$black: #132531;
+$dark: #193040;
+$blue: #005CFF;
+$sky: #00DADA;
+$yellow: #FFE700;
+
+
+// // SPECIAL COLORS ============================================
+// //============================================================/
+$blue-light: #EFF9FD;
+$rose-light: #FFF8FA;
+$gray-light: #F9F9F9;
+
+$blue-line: #C9E2EB;
+$rose-line: #F2E1E7;
+$gray-line: #E8E8E8;
+
+$dark-medium: #4C759B;
+$dark-hard: #061E2F;
+
+
+// // ELEMENT COLORS ============================================
+// //============================================================/
+$btn-color: $blue;
+$btn-hover: $sky;
+
+$link-color: $blue;
+$link-hover: $sky;
+
+$close-color: $white;
+$close-hover: $sky;
+
+$line-color: #244B65;
+
+
+// // GRADIENTS =================================================
+// //============================================================/
+$gradient: linear-gradient(93.15deg, $sky 0%, $blue 100%);
+
+
+// // BASIC FONTS ===============================================
+// //============================================================/
+$font-family: "Montserrat";
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+$font-extra-bold: 800;
+
+
+// // SPECIAL TOOLS =============================================
+// //============================================================/
+$basic-transition: ease-in-out 0.3s;

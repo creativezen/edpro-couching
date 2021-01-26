@@ -1,0 +1,26 @@
+.price {
+
+    &__text {
+        margin-bottom: 0.2em;
+        font-size: 1em;
+        font-weight: $font-semibold;
+        line-height: 1;
+    }
+
+    &__value {
+        display: inline-block;
+        position: relative;
+        font-size: 2.3em;
+        font-weight: $font-bold;
+        line-height: 1;
+
+        &::after {
+            position: absolute;
+            bottom: 0;
+            right: -1em;
+            content: '₽';
+            font-size: 0.5em;
+            font-weight: $font-semibold;
+        }
+    }
+}

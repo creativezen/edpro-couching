@@ -1,0 +1,109 @@
+.feedbacks {
+
+    &__list {
+        margin-left: -20px !important;
+        margin-right: -20px !important;
+
+        .list__title {
+            margin-bottom: 0.4em;
+            margin-top: 0.4em;
+            background: -webkit-linear-gradient($sky 0%, $sky 50%, $blue 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &__item {
+        @include col();
+        @include size(4);
+        @include size-md(6);
+        @include size-sm(12);
+
+        margin-bottom: 40px;
+
+        &--story {
+            @include size(6);
+            @include size-md(12);
+
+            .story {
+                display: block;
+
+                .list__item { font-size: 1.6rem; }
+
+                .photo {
+                    max-width: 110px;
+                    max-height: 110px;
+                }
+
+                .person {
+                    margin-top: 0.5em;
+                    margin-bottom: 0.5em;
+
+                    .name {
+                        margin-right: 0;
+                        background: -webkit-linear-gradient($sky 0%, $sky 50%, $blue 100%);
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
+                    }
+                }
+
+                .content {
+                    // height: 200px;
+                    overflow: hidden;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+
+}
+
+@media only screen and (max-width: 960px) {
+
+    .feedbacks__item--story .story .content { max-width: 100%; }
+
+    .feedbacks__item { margin-bottom: 20px; }
+}
+
+@media only screen and (max-width: 780px) {
+
+
+}
+
+@media only screen and (max-width: 640px) {
+
+    .feedbacks__list {
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+
+    .feedbacks__item { margin-bottom: 0; }
+
+    .feedbacks__item--story + .feedbacks__item--story { margin-top: 30px; }
+
+    .feedbacks__item + .feedbacks__item { margin-top: 30px; }
+
+    .feedbacks__item--story .story .list__item { font-size: 1.4rem; }
+
+    .feedbacks__item--story .story .photo { margin-bottom: 0; }
+}
+
+@media only screen and (max-width: 480px) {
+
+
+}
+
+@media only screen and (max-width: 375px) {
+
+
+}
+
+@media only screen and (max-width: 320px) {
+
+
+}

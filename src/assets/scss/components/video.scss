@@ -1,0 +1,56 @@
+.video {
+
+    $parent: &;
+
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+    height: 260px;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background: $gradient;
+        opacity: 0.6;
+        transition: opacity $basic-transition;
+    }
+
+    &__play {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("data:image/svg+xml,%3Csvg width='22' height='27' viewBox='0 0 22 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 1.33551V25.3355C0 26.3904 1.16699 27.0275 2.05434 26.4571L20.721 14.4571C21.5374 13.9322 21.5374 12.7388 20.721 12.2139L2.05434 0.213943C1.16699 -0.356496 0 0.280626 0 1.33551ZM17.5343 13.3352L2.66666 22.893V3.77745L17.5343 13.3352Z' fill='white'/%3E%3C/svg%3E%0A");
+        background-size: 22px 27px;
+    }
+
+    &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover {
+
+        #{$parent}__overlay { opacity: 0.9; }
+    }
+}
