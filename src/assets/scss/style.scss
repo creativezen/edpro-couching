@@ -6,8 +6,9 @@
 
 /** Vendors **/
 @import "vendor/reset";
+@import "vendor/aos/aos";
 @import "vendor/tippy";
-@import "smart-grid";
+@import "vendor/smart-grid";
 
 /** Basic **/
 @import "basic";

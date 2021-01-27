@@ -4,6 +4,7 @@ import { tabs } from './components/tabs'
 import { readMore } from './components/readMore'
 import { faq } from './components/faq'
 import { tooltip } from './components/tooltip'
+import AOS from 'aos'
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -52,5 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     readMore(ELEMENT.READ)
     faq(ELEMENT.FAQ)
     tooltip(ELEMENT.TOOLTIP)
+
+    AOS.init()
 
 })

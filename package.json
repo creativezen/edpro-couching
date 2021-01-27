@@ -34,6 +34,7 @@
         "IE 10"
     ],
     "dependencies": {
+        "aos": "^2.3.4",
         "gulp-group-css-media-queries": "^1.2.2",
         "jquery": "^3.5.1",
         "jquery.scrollto": "^2.1.2",
