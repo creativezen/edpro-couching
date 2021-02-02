@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
             open: 'js-modal-open',
             close: 'js-modal-close',
             radio: 'js-modal-radio',
-            title: 'js-modal-title'
+            title: 'js-modal-title',
+            success: 'js-form-success'
         },
 
         SCROLL: {

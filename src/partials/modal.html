@@ -3,8 +3,8 @@
 		<div class="modal__form">
 			<form class="form">
 
-				<div class="modal__title js-modal-title"><!-- From modal.js --></div>
-				<div class="modal__radio-buttons js-modal-radio"><!-- From modal.js --></div>
+				<div class="modal__title js-modal-title"><!-- append from modal.js --></div>
+				<div class="modal__radio-buttons js-modal-radio"><!-- append from modal.js --></div>
 
 				<p class="form__item"><input class="input" name="Имя" type="text" placeholder="Поле стандартное"></p>
 				<p class="form__item"><input class="input -invalid" name="Имя" type="text" placeholder="Поле не валидно"></p>
@@ -27,8 +27,9 @@
 			</form>
 
 			<!-- /* MESSAGE FOR SUCCESS SUBMIT */ -->
+			<!-- just change state from classList.add('--active') -->
 			<!-- ================================================================================= -->
-			<div class="modal__form-success"><!-- change state with toggleClass .--active -->
+			<div class="modal__form-success js-form-success --active">
 				<div class="modal__title">Спасибо, менеджер свяжется с вами в течение суток</div>
 				<button class="btn js-modal-close" type="button">Ок</button>
 			</div>

@@ -1,7 +1,7 @@
 import { getScrollBarWidth } from './scrollBarWidth'
 import { radioButtons } from './radioButtons'
 
-export const modal = ({ window, container, active, open, close, radio, title }) => {
+export const modal = ({ window, container, active, open, close, radio, title, success }) => {
 
     document.addEventListener('click', event => {
 
@@ -127,6 +127,10 @@ export const modal = ({ window, container, active, open, close, radio, title }) 
             // Удалили содержимое блока радио кнопок
             // =====================================
             document.querySelector(`.${radio}`).innerHTML = ''
+
+            // Скрыли блок с сообщением об успешной отправке
+            // =============================================
+            document.querySelector(`.${success}`).classList.remove('--active')
         }
     })
 }
