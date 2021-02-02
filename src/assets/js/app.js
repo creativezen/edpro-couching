@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
             container: 'js-modal-container',
             active: 'modal--active',
             open: 'js-modal-open',
-            close: 'js-modal-close'
+            close: 'js-modal-close',
+            radio: 'js-modal-radio',
+            title: 'js-modal-title'
         },
 
         SCROLL: {
@@ -55,5 +57,4 @@ document.addEventListener('DOMContentLoaded', () => {
     tooltip(ELEMENT.TOOLTIP)
 
     AOS.init()
-
 })

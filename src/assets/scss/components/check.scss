@@ -1,0 +1,62 @@
+
+
+.check {
+
+	$parent: &;
+
+	padding-left: 2.5em;
+	font-size: 1.5rem;
+	font-weight: $font-semibold;
+
+	&__input {
+
+		@extend .visually-hidden;
+
+		&:checked + .check__box { background-image: $check-checked; }
+
+		&:disabled + .check__box { background-image: $check-disabled; }
+
+		&:disabled:checked + .check__box { background-image: $check-checked-disabled; }
+	}
+
+	&__box {
+		position: absolute;
+		width: 1.7em;
+		height: 1.7em;
+		margin-top: -0.2em;
+		margin-left: -2.6em;
+
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 90%;
+		background-image: $check-default;
+	}
+
+	&.-disabled { color: $gray-light; }
+
+	&--personal {
+
+		font-size: 1.3rem;
+
+		#{$parent}__box {
+			margin-top: 0.2em;
+			width: 1.5em;
+			height: 1.5em;
+		}
+	}
+}
+
+@media only screen and (max-width: 480px) {
+
+	.check {
+		padding-left: 2.1em;
+		font-size: 1.4rem;
+	}
+
+	.check__box { margin-left: -2.2em; }
+
+	.check--personal {
+		font-size: 1.2rem;
+		line-height: 1.2;
+	}
+}

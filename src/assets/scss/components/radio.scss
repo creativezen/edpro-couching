@@ -1,0 +1,28 @@
+
+
+.radio {
+
+	$parent: &;
+
+	@extend .check;
+
+	&__input {
+
+		@extend .check__input;
+
+		&:checked + .radio__box { background-image: $radio-ckecked; }
+
+		&:disabled + .radio__box { background-image: $radio-disabled; }
+
+		&:disabled:checked + .radio__box { background-image: $radio-ckecked-disabled; }
+	}
+
+	&__box {
+
+		@extend .check__box;
+
+		background-image: $radio-default;
+	}
+
+	&.-disabled { color: $gray-light; }
+}

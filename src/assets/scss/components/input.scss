@@ -1,0 +1,46 @@
+.input {
+
+	$parent: &;
+
+	height: 54px;
+	width: 100%;
+	padding-left: 2rem;
+	padding-right: 4.5rem;
+  font-size: 1.5rem;
+  font-weight: $font-medium;
+	line-height: 1;
+	border: none;
+	border-radius: 5px;
+	background-color: $white;
+	box-shadow: 0 0 0 1.5px rgba($blue, 1);
+
+	&::placeholder {
+    font-size: 1.5rem;
+    font-weight: $font-medium;
+		color: $dark-medium;
+	}
+
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 0 1.5px rgba($blue, 1);
+		background-color: $white;
+	}
+
+	&.-valid {
+		background-color: $white;
+    box-shadow: 0 0 0 1.5px rgba($sky, 1);
+    color: $black;
+	}
+
+	&.-invalid {
+		background-color: $white;
+		box-shadow: 0 0 0 1.5px rgba($red, 1);
+    &::placeholder { color: $red; }
+	}
+
+	&[disabled] {
+		background-color: $gray-light;
+		box-shadow: 0 0 0 1.5px rgba($dark-medium, 0.3);
+		&::placeholder { color: rgba($dark-medium, 0.5); }
+	}
+}

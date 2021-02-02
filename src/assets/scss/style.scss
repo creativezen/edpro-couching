@@ -12,9 +12,13 @@
 
 /** Basic **/
 @import "basic";
+@import "config/svg";
 
 /** Components **/
 @import "components/btn";
+@import "components/input";
+@import "components/check";
+@import "components/radio";
 @import "components/form";
 @import "components/text";
 @import "components/link";

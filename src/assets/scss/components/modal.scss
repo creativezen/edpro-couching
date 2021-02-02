@@ -1,109 +1,155 @@
 .modal {
-    $parent: &;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
 
-    z-index: 9100;
-    background-color: rgba($black, 0.6);
-    overflow: hidden;
+	$parent: &;
 
-    visibility: hidden;
-    opacity: 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
 
-    &__container {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+	z-index: 9100;
+	background-color: rgba($black, 0.6);
+	overflow: hidden;
 
-        min-height: 100%;
-    }
+	visibility: hidden;
+	opacity: 0;
 
-    &__form {
-        width: 90%;
-        max-width: 500px;
-        padding: 3rem;
+	&__container {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 
-        border-radius: 8px;
-        background-color: $white;
-        box-shadow: 0px 9px 24px rgba(0, 0, 0, 0.05);
+		min-height: 100%;
+	}
 
-        transform: translateY(-50px);
-        transition: $basic-transition;
-    }
+	&__form {
+		position: relative;
+		width: 90%;
+		max-width: 640px;
+		padding: 3rem;
 
-    &__title {
-        margin-bottom: 1.4rem;
-        font-size: 3.4rem;
-        font-weight: $font-regular;
-        text-align: center;
-        letter-spacing: -0.01em;
-    }
+		border-radius: 8px;
+		background-color: $white;
+		box-shadow: 0px 9px 24px rgba(0, 0, 0, 0.05);
 
-    &__close {
-        position: absolute;
-        top: 3rem;
-        right: 3rem;
-        width: 40px;
-        height: 40px;
+		transform: translateY(-50px);
+		transition: $basic-transition;
+	}
 
-        cursor: pointer;
-        transition: transform $basic-transition;
+	&__title {
+		margin-bottom: 2rem;
+		font-size: 3.4rem;
+		font-weight: $font-bold;
+		line-height: 1.3;
+		color: $black;
+		letter-spacing: -0.01em;
+	}
 
-        .icon {
-            width: 40px;
-            height: 40px;
-            fill: $close-color;
+	&__radio-buttons {
+		margin-bottom: 3rem;
 
-            transition: fill $basic-transition;
-        }
+		.radio { display: block; }
+		.radio + .radio { margin-top: 1.5rem; }
+	}
 
-        &:hover {
-            transform: rotate(180deg);
+	.check { color: $black; }
 
-            .icon {
-                fill: $close-hover;
-            }
-        }
-    }
+	&__close {
+		position: absolute;
+		top: 3rem;
+		right: 3rem;
+		width: 40px;
+		height: 40px;
 
-    &__video {
+		cursor: pointer;
+		transition: transform $basic-transition;
 
-        position: relative;
-        width: 80%;
-        min-height: 70vh;
+		.icon {
+			width: 40px;
+			height: 40px;
+			fill: $close-color;
 
-        iframe {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
+			transition: fill $basic-transition;
+		}
 
-            width: 100%;
-            height: 100%;
-        }
-    }
+		&:hover {
+			transform: rotate(180deg);
 
-    .text {
-        font-weight: $font-medium;
-        text-align: center;
-    }
+			.icon {
+				fill: $close-hover;
+			}
+		}
+	}
 
-    &--active {
-        visibility: visible;
-        opacity: 1;
+	&__video {
 
-        #{$parent}__form {
-            transform: translateY(0);
-        }
-    }
+		position: relative;
+		width: 80%;
+		min-height: 70vh;
+
+		iframe {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__form-success {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: 3rem;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border-radius: 8px;
+		background-color: $white;
+
+		visibility: hidden;
+		opacity: 0;
+		transition: $basic-transition;
+
+		#{$parent}__title {
+			text-align: center;
+			font-size: 3rem;
+			color: $black;
+		}
+
+		&.--active {
+			visibility: visible;
+	    opacity: 1;
+		}
+
+		.btn { margin-top: 3rem; }
+	}
+
+	.text {
+		font-weight: $font-medium;
+		color: $black;
+	}
+
+	&--active {
+		visibility: visible;
+		opacity: 1;
+
+		#{$parent}__form {
+			transform: translateY(0);
+		}
+	}
 }
 
 @media only screen and (max-width: 1024px) {
@@ -128,12 +174,15 @@
 
 @media only screen and (max-width: 480px) {
 
-
+	.modal__form { padding: 2rem; }
 }
 
 @media only screen and (max-width: 375px) {
 
-
+	.modal__title {
+		margin-bottom: 1.4rem;
+		font-size: 2.3rem;
+	}
 }
 
 @media only screen and (max-width: 320px) {
